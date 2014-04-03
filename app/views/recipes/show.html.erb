@@ -1,0 +1,22 @@
+<div class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    <li><a class="navbar-brand" href="/recipes">Recipe Central</a></li>
+  </ul>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recipe Options <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe</a></li>
+          <li><a href="/recipes/<%= @recipe.id %>">Delete Recipe</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<h1><%= @recipe.name %></h1>
+
+<h3>Instructions</h3>
+  <%= @recipe.instructions %>
+
+<%= render('recipes/footer') %>
