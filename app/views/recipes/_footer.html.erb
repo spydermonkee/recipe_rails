@@ -9,8 +9,11 @@
       </div>
       <div class= "nav pull-right">
         <a href="/recipes/new" class="btn btn-success nav" rel="nofollow">New Recipe</a>
-        <a href="/recipes/<%= @recipe.id %>/edit" class="btn btn-warning nav" rel="nofollow" style="margin-right:3px">Edit Recipe</a>
+        <% if @recipe.name && @recipe.instructions %>
+          <a href="/recipes/<%= @recipe.id %>/edit" class="btn btn-warning nav" rel="nofollow" style="margin-right:3px">Edit Recipe</a>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+

@@ -1,0 +1,12 @@
+<%= render('recipes/header') %>
+<h1>New Recipe:</h1>
+
+<%= render('layouts/errors', :object => @recipe) %>
+
+<form class="form-horizontal" action="/recipes/new" method="post">
+<%= render 'form' %>
+<button class="btn btn-info">Create Recipe</button>
+</form>
+
+
+<%= render('recipes/footer') %>

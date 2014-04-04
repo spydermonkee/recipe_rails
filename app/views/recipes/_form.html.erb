@@ -1,0 +1,11 @@
+<div class="form-inline space-me">
+  <label for="name">Recipe Name</label>
+  <input class="form-control" type="text" id="recipe_name" name="recipe[name]" placeholder="Recipe Name..." value="<%= @recipe.name %>"></input>
+</div>
+<label for="content">Recipe Instructions</label>
+<textarea  rows="10" class="form-control" name="recipe[instructions]" id="reccipe_instructions" placeholder="Put your Recipe here:">
+  <% if @recipe.instructions %>
+    <%=@recipe.instructions%>
+  <% end %>
+</textarea>
+<br/>

@@ -1,7 +1,22 @@
-<h1 class= "jumbotron">Recipe Central &#8482<h1>
+<div class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    <li><a class="navbar-brand" href="/recipes">Recipe Central&#8482</a></li>
+  </ul>
+</div>
+
 <h3>Today's hottest recipes:</h3>
 <ul>
   <% @recipes.each do |recipe| %>
     <li><a href= "/recipes/<%= recipe.id %>"><%= recipe.name %></a></li>
   <% end %>
 </ul>
+
+<div id= "recipe_main_navbar" class= "navbar navbar-fixed-bottom">
+  <div class= "navbar-inner">
+    <div class= "container">
+      <div class= "nav pull-right">
+        <a href="/recipes/new" class="btn btn-success nav" rel="nofollow">New Recipe</a>
+      </div>
+    </div>
+  </div>
+</div>
