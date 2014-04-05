@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>RecipeCentral</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class= "container">
-    <nav class="navbar navbar-default">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
       <li><a class="navbar-brand" href="/recipes">Recipe Central&#8482</a></li>
@@ -21,9 +11,3 @@
     </div>
   </div>
 </nav>
-
-    <h1><%= flash[:notice] %></h1>
-    <%= yield %>
-  </div>
-</body>
-</html>

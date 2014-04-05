@@ -1,0 +1,17 @@
+<h1>Update <%= @tag.name %> Tag</h1>
+<%= render('layouts/errors', :object => @tag) %>
+
+<form class="form-horizontal" action="/tags/<%= @tag.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <%= render 'form' %>
+  <button class="btn btn-info">Update Tag</button>
+</form>
+<div id= "recipe_view_navbar" class= "navbar navbar-fixed-bottom">
+  <div class= "navbar-inner">
+    <div class= "container">
+      <div class= "nav pull-right">
+        <%= link_to "New tag", new_tag_path, :class=> "btn btn-success" %>
+      </div>
+    </div>
+  </div>
+</div>

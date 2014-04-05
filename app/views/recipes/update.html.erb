@@ -1,4 +1,3 @@
-<%= render 'recipes/header' %>
 <h1>Update <%= @recipe.name %> Recipe</h1>
 <%= render('layouts/errors', :object => @recipe) %>
 
@@ -7,4 +6,12 @@
   <%= render 'form' %>
   <button class="btn btn-info">Update Recipe</button>
 </form>
-<%= render('recipes/footer') %>
+<div id= "recipe_view_navbar" class= "navbar navbar-fixed-bottom">
+  <div class= "navbar-inner">
+    <div class= "container">
+      <div class= "nav pull-right">
+        <%= link_to "New tag", new_recipe_path, :class=> "btn btn-success" %>
+      </div>
+    </div>
+  </div>
+</div>
