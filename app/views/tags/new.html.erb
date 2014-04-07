@@ -1,0 +1,11 @@
+<%= content_for :title, "Recipe Central- New Tag" %>
+<%= render 'form' %>
+<div id="tag_view_navbar" class= "navbar navbar-fixed-bottom">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="nav pull-right">
+        <%= link_to "New Tag", new_tag_path, :class=> "btn btn-success" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,16 @@
-
+<%= content_for :title, "Recipe Central- Tags" %>
+<h1 class="space-me">Existing Tags</h1>
+<ul>
+  <% @tags.each do |tag| %>
+    <li><a href= "/tags/<%= tag.id %>"><%= tag.name %></a></li>
+  <% end %>
+</ul>
+<div id="tag_view_navbar" class= "navbar navbar-fixed-bottom">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="nav pull-right">
+        <%= link_to "New Tag", new_tag_path, :class => "btn btn-success" %>
+      </div>
+    </div>
+  </div>
+</div>
