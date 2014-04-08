@@ -9,6 +9,7 @@ class RecipesController < ApplicationController
   end
 
   def new
+    @tags = Tag.all
     @recipe = Recipe.new
   end
 
@@ -24,9 +25,11 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find params[:id]
+    @tags = Tag.find(@recipe.id.tag)
   end
 
   def update
+    @tags =Tag.all
     @recipe = Recipe.find params[:id]
     @recipe.update recipe_params
     if @recipe.save
@@ -46,6 +49,6 @@ class RecipesController < ApplicationController
 
   private
   def recipe_params
-    params.require(:recipe).permit(:id, :name, :instructions, :star_rating)
+    params.require(:recipe).permit(:id, :name, :instructions, :star_rating, :tag_id)
   end
 end
